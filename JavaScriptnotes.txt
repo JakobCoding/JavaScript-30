@@ -1,0 +1,16 @@
+// An asynchronous function can run at any time independently and it won't stop the browser from completing the loading of a page. 
+
+// A try catch statement allows us to attempt to complete a request.
+If it doesn't work, we can catch the error information and do something with it.
+
+async function getQuotes() {
+    const apiUrl = 'https://type.fit/api/quotes';
+    try {
+
+    } catch (error) {
+        // Catch Error Here, in a production website you would potentially pass that into an alert.
+        alert(error)
+
+    }
+    
+}
