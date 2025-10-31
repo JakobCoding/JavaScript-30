@@ -3,12 +3,20 @@
 
 let apiQuotes = [];
 
+// Show New Quote
+function newQuote() {
+    // Pick a Random quote from apiQuotes Array
+    const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+    console.log(quote);
+}
+
 async function getQuotes() {
     const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
     try {
         const response = await fetch(apiUrl);
         apiQuotes = await response.json();
-        console.log(apiQuotes);
+        newQuote();
+        // console.log(apiQuotes[12]); picks 1 specific quote, we want random quotes generated every button click from array[]
     }catch (error) {
         // Catch Error Here
     }
