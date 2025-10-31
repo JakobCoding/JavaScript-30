@@ -8,3 +8,7 @@ https://zerotomastery.io/community/coding-challenges/
 Top Free Courses & Templates:
 https://zerotomastery.io/resources/
 
+Hero Patterns:
+A collection of repeatable SVG background patterns for you to use on your web projects.
+https://heropatterns.com/
+
