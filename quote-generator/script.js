@@ -1,3 +1,10 @@
+const quoteContainer = document.getElementById("quote-container");
+const quoteText = document.getElementById("quote");
+const authorText = document.getElementById("author");
+const twitterBtn = document.getElementById("twitter");
+const newQuoteBtn = document.getElementById("new-quote");
+
+
 // Get Quotes from API
 // An asynchronous function can run at any time independently and it won't stop the browser from completing the loading of a page. 
 
