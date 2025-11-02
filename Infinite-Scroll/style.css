@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
- /* Border-box: Prevents padding from adding extra width or height to the page*/
+ /* box-sizing: Border-box; Prevents padding from adding extra width or height to the page*/
 
 html {
     box-sizing: border-box;
@@ -9,5 +9,14 @@ html {
 body {
     margin: 0;
     font-family: Bebas Neue, sans-serif;
+    background: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 40px;
+    letter-spacing: 5px;
 }
 
