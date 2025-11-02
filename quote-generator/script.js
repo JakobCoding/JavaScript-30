@@ -15,7 +15,20 @@ const newQuoteBtn = document.getElementById("new-quote");
 function newQuote() {
     // Pick a Random quote from localQuotes Array
     const quote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
-    console.log(quote);
+    // Check if author field is blank and replace it with quote unknown
+    // if statement shows if there is NO !quote.author to show "unkown" on the app underneath the quote.  
+    if (!quote.author) {
+        authorText.textContent = "Unknown"; 
+    }   else {
+        authorText.textContent = quote.author; 
+    }
+    // Check the quote length to determin the sytling 
+    if (quote.text.length > 50) {
+        quoteText.classList.add("long-quote");
+    }   else {
+        quoteText.classList.remove("long-quote");
+    }
+    quoteText.textContent = quote.text; 
 }
 
 // async function getQuotes() {
