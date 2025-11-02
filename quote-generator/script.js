@@ -23,7 +23,7 @@ function newQuote() {
         authorText.textContent = quote.author; 
     }
     // Check the quote length to determin the sytling 
-    if (quote.text.length > 50) {
+    if (quote.text.length > 80) {
         quoteText.classList.add("long-quote");
     }   else {
         quoteText.classList.remove("long-quote");
