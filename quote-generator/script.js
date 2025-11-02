@@ -3,6 +3,7 @@ const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
+const loader = document.getElementById('loader');
 
 
 // Get Quotes from API
@@ -10,9 +11,21 @@ const newQuoteBtn = document.getElementById("new-quote");
 
 // let apiQuotes = [];
 
+// Show Loading 
+function loading() {
+    loader.hidden = false;
+    quoteContainer.hidden = true;
+}
+
+// Hide Loading
+function complete() {
+    quoteContainer.hidden = false;
+    loader.hidden = true; 
+}
 
 // Show New Quote
 function newQuote() {
+    loading(); 
     // Pick a Random quote from localQuotes Array
     const quote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
     // Check if author field is blank and replace it with quote unknown
@@ -28,7 +41,9 @@ function newQuote() {
     }   else {
         quoteText.classList.remove("long-quote");
     }
+    // Set Quote, Hide Loader
     quoteText.textContent = quote.text; 
+    complete(); 
 }
 
 
@@ -57,6 +72,7 @@ twitterBtn.addEventListener('click', postQuote);
 // On Load
 // getQuotes();
 newQuote();
+
 
 // There is an alternative option for this project that does not require an API key - https://zenquotes.io/
 
