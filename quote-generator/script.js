@@ -31,6 +31,17 @@ function newQuote() {
     quoteText.textContent = quote.text; 
 }
 
+
+// Post quote on X
+function postQuote() {
+    const xUrl = `https://x.com/intent/post?text=${quoteText.textContent} - ${authorText.textContent}`;
+    window.open(xUrl, '_blank');
+}
+
+// Event Listeners
+newQuoteBtn.addEventListener('click', newQuote);
+twitterBtn.addEventListener('click', postQuote);
+
 // async function getQuotes() {
 //     const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
 //     try {
