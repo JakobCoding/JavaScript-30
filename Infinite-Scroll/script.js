@@ -16,6 +16,10 @@ function setAttributes(element, attributes) {
 // Check if all images were loaded
 function imageLoaded() {
     console.log('image loaded'); 
+    imagesLoaded++;
+    if (images === totalImages)
+        ready = true;
+        console.log('ready =', ready); 
 }
 
 // Create Elements For Links and Photos, Add to Dom
