@@ -24,6 +24,8 @@ function imageLoaded() {
 
 // Create Elements For Links and Photos, Add to Dom
 function displayPhotos() {
+    totalImages = photosArray.length;
+    console.log('total images', totalImages);
     // Run function for each object in photosArray 
     photosArray.forEach((photo) => {
       // Create <a> to link to Unsplash
