@@ -1,3 +1,8 @@
+const imageContainer = document.getElementById("image-container");
+const loader = document.getElementById("loader");
+
+
+
 // Unsplash API
 const count = 10; 
 const apiKey = 'aEV0CQiuScNbXZfKDhlmibMa6_vlGoK62VVhXAoAycA';
