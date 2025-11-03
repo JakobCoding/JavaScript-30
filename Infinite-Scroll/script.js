@@ -14,3 +14,5 @@ async function getPhotos () {
     }
 }
 
+// On Load 
+getPhotos();
