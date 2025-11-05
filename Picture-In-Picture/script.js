@@ -5,11 +5,23 @@ const button = document.getElementById('button');
 async function selectMediaStream() {
     try {
         const mediastream = await navigator.mediaDevices.getDisplayMedia(); 
+        videoElement.srcObject = mediastream;
+        videoElement.onloadedmetadata = () => {
+            videoElement.play();
+        }
     } catch (error) {
         // catch erros here 
         console.log('Woops error here:', error);
     }
 }
+
+button.addEventListener('click', async () => {
+    // Disable Button
+    button.disabled = true; 
+    // Start Picture in Picture 
+    await videoElement.requestPictureInPicture();
+    button.disabled = false;
+});
 
 // On Load
 selectMediaStream();
