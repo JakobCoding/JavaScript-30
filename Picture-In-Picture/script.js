@@ -1,7 +1,7 @@
 const videoElement = document.getElementById('video');
 const button = document.getElementById('button');
 
-// Promt to select media stream, pass to video element, then play 
+// Prompt to select media stream, pass to video element, then play 
 async function selectMediaStream() {
     try {
         const mediastream = await navigator.mediaDevices.getDisplayMedia(); 
@@ -11,7 +11,6 @@ async function selectMediaStream() {
         }
     } catch (error) {
         // catch erros here 
-        console.log('Woops error here:', error);
     }
 }
 
